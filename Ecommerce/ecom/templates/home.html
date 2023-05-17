@@ -188,22 +188,25 @@
                 
             </div>
         </div>
+        
         <div class="row">
+            {% for i in item %}
             <div class="col-12 col-md-4 p-5 mt-3">
                 <div class="flip-card" tabIndex="0">
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <a href="#"><img src="{%static "img/lemon grass greent ea.png"%}" class="rounded-circle img-fluid"></a>
+                        <a href="#"><img src="{{i.upload_img.url}}" class="rounded-circle img-fluid"></a>
                       </div>
                       <div class="flip-card-back">
-                        
-                        <p>Lemon Grass Tea<br>Lemon Grass whole leaf Organic Green tea is a smooth and delicate
-                             blend of antioxidant rich green tea underscored by a hint of refreshing lemon grass...</p>
+                         <p><br> {{i.discription}}</p>
                       </div>
                     </div>
                   </div>
                 
-            </div>
+                 </div>
+                 {% endfor %}
+                
+                 
             <div class="col-12 col-md-4 p-5 mt-3">
                 <div class="flip-card" tabIndex="0">
                     <div class="flip-card-inner">
